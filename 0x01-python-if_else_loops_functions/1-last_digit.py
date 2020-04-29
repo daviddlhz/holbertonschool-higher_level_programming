@@ -12,4 +12,4 @@ elif n < 6:
     messag = "and is less than 6 and not 0"
 else:
     messag = "and is 0"
-print("Last digit of {:d} is {:d} {}".format(number, n, messag))
+print("Last digit of {:d} is {:d} {:s}".format(number, n, messag))
