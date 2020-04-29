@@ -5,8 +5,9 @@ n = (abs(number) % 10)
 if number < 0:
     n = n * -1
 if n > 5:
-    print("Last digit of {} is {} and is greater than 5".format(number, n))
+    messag = "and is greater than 5"
 elif n < 6:
-    print("Last digit of {} is {} and is less than 6 and not 0".format(number, n))
+    messag = "and is less than 6 and not 0"
 else:
-    print("Last digit of {} is {} and is 0".format(number, n))
+    messag = "and is 0"
+print("Last digit of {:d} is {:d} {}".format(number, n, messag))
