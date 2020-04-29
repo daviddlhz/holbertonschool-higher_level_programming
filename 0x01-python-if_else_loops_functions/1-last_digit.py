@@ -8,7 +8,7 @@ if number < 0:
 
 if n > 5:
     messag = "and is greater than 5"
-elif n < 6:
+elif n < 6 and n != 0:
     messag = "and is less than 6 and not 0"
 else:
     messag = "and is 0"
