@@ -81,16 +81,15 @@ class Rectangle:
             return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """[method print str]
+        """[Method str]
 
         Returns:
-            [string] -- [#]
+            [string] -- [print a # or print rectangle]
         """
-        acum = ""
-        if self.__width == 0 or self.__height == 0:
-            return (string)
-        for i in range(self.__height):
-            for j in range(self.__width):
-                acum += '#'
-            acum += '\n'
-        return (acum[:-1])
+        a = ""
+        for h in range(self.__height):
+            for w in range(self.__width):
+                a = a + "#"
+            if h != self.__height - 1:
+                a = a + '\n'
+        return a
