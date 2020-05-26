@@ -29,6 +29,11 @@ class Rectangle:
         """
     @property
     def width(self):
+        """[getter: width]
+
+        Returns:
+            [int] -- [width of rectangle]
+        """
         return self.__width
 
     @width.setter
@@ -54,18 +59,33 @@ class Rectangle:
             self.__height = height
 
     def area(self):
+        """[area]
+
+        Returns:
+            [int] -- [area of a rectangle]
+        """
         if self.__height == 0 or self.__width == 0:
             return 0
         else:
             return self.__width * self.__height
 
     def perimeter(self):
+        """[Method perimeter]
+
+        Returns:
+            [int] -- [Permiter of rectangle]
+        """
         if self.__height == 0 or self.__width == 0:
             return 0
         else:
             return 2 * (self.__width + self.__height)
 
     def __str__(self):
+        """[method print str]
+
+        Returns:
+            [string] -- [#]
+        """
         acum = ""
         if self.__width == 0 or self.__height == 0:
             return (string)
