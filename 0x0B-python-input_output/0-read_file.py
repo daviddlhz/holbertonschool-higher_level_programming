@@ -10,6 +10,6 @@ def read_file(filename=""):
         filename (str): [route of the file]. Defaults to "".
     """
 
-    with open(filename, 'r') as f:
-        text_read = f.read()
-        print(text_read)
+    with open(filename, encoding="utf-8") as f:
+        for i in f:
+            print(i, end="")
