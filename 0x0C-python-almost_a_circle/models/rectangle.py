@@ -12,14 +12,15 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
+        Constructor
         Instantiation with width and height
         width: width of rectangle
         height: height of rectangle
         """
-        self.__width = width
-        self.__height = height
-        self.__X = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     """[Getters and setters]
@@ -65,7 +66,7 @@ class Rectangle(Base):
         """Set x"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("x must be > 0")
         self.__x = value
 
@@ -80,7 +81,7 @@ class Rectangle(Base):
         """Set y"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("y must be > 0")
         self.__y = value
 
@@ -90,3 +91,14 @@ class Rectangle(Base):
         """
 
         return (self.__width * self.__height)
+
+    def display(self):
+        '''print a rectangle with '#' character'''
+        print('\n' * self.__y, end="")
+        for i in range(self.__height):
+            print(' ' * self.__x, end='')
+            for j in range(self.__width):
+                if j != self.__width - 1:
+                    print('#', end="")
+                else:
+                    print("#")
