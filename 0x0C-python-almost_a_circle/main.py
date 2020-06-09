@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-""" 10-main """
+""" 13-main """
 from models.square import Square
 
 if __name__ == "__main__":
 
-    s1 = Square(5)
+    s1 = Square(10, 2, 1)
     print(s1)
-    print(s1.size)
-    s1.size = 10
-    print(s1)
+    s1_dictionary = s1.to_dictionary()
+    print(s1_dictionary)
+    print(type(s1_dictionary))
 
-    try:
-        s1.size = "9"
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    s2 = Square(1, 1)
+    print(s2)
+    s2.update(**s1_dictionary)
+    print(s2)
+    print(s1 == s2)
