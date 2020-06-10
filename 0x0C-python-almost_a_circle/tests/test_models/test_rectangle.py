@@ -12,6 +12,7 @@ import pep8
 from models.rectangle import Rectangle
 from models.base import Base
 
+
 class Test_Rectangle(unittest.TestCase):
     """ validate test for Rectangle """
 
