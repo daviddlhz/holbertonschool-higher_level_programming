@@ -5,6 +5,7 @@
 
 import json
 
+
 class Base:
     """[Initialization variables]
     """
